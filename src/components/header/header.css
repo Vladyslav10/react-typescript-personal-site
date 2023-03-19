@@ -1,3 +1,49 @@
 .header {
+    background-color: #000;
+    font-size: 18px;
+    padding: 25px 0px;
+}
+
+.header__row {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    color: gold;
+    border: 2px solid goldenrod;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+    display: none;
+}
+
+.header__btn.visible {
+    display: block;
+}
+
+.header__btn:hover {
+    background-color: gray;
+    border: 2px solid gray;
+}
+
+@media (max-width: 766px){
+    .header {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px){
+    .header {
+        font-size: 14px;
+    }
+    
+    .header__btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        color: orange;
+    }
 }

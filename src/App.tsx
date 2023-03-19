@@ -8,11 +8,11 @@ import AppRouter from './routes/AppRouter';
 const App = () => {
   return (
     <div className='wrapper'>
-      <Header/>
       <BrowserRouter>
+        <Header/>
         <AppRouter/>
+        <Footer/>
       </BrowserRouter>
-      <Footer/>
     </div>
   );
 }

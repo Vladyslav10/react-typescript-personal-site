@@ -1,7 +1,6 @@
-// import * as UserActionCreators from './user'
-// import * as TodoActionCreators from './todo'
+import * as GlobalActionCreators from './global';
 
-export default {
-    // ...TodoActionCreators,
-    // ...UserActionCreators
+// eslint-disable-next-line import/no-anonymous-default-export
+export default  {
+    ...GlobalActionCreators,
 }
