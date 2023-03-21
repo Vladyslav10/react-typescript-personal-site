@@ -1,0 +1,78 @@
+.form {
+    padding: 30px 20px;
+    border: 2px solid green;
+    border-radius: 6px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+	/* transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(-100%, 0px) rotateY(45deg); */
+}
+
+/* .form.show {
+    transform: perspective(600px) translate(0%, 0px) rotateY(0deg);
+	opacity: 1;
+} */
+
+.form__input {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto 25px auto;
+}
+
+.form__input_hint {
+    display: none;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    top: -17px;
+    left: 2px;
+}
+
+.form__input.err > .form__input_hint {
+    display: block;
+}
+
+.form__login, .form__password {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px 15px;
+    border-radius: 2px;
+    transition: all 0.4s ease 0s;
+}
+
+.form__login:focus, .form__password:focus {
+    box-shadow: 0 0 5px 0.5px #D3D3D3;
+}
+
+.form__input.err > .form__login, .form__input.err > .form__password {
+    border: 1px solid red;
+}
+
+.form__button {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+.form__button {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+.form__btn {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid green;
+    background-color: transparent;
+    transition: all 0.4s ease 0s;
+}
+
+.form__btn:hover {
+    background-color: rgb(209, 207, 207);
+}
+
