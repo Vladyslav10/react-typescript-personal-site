@@ -5,15 +5,26 @@
     max-width: 600px;
     margin: 0 auto;
     position: relative;
-	/* transition: all 0.8s ease 0s;
-	opacity: 0;
-	transform: perspective(600px) translate(-100%, 0px) rotateY(45deg); */
+	transition: all 0.8s ease 0s;
+	
 }
 
-/* .form.show {
+.form-enter {
     transform: perspective(600px) translate(0%, 0px) rotateY(0deg);
 	opacity: 1;
-} */
+}
+.form-enter-active {
+    opacity: 0;
+	transform: perspective(600px) translate(-100%, 0px) rotateY(45deg);
+}
+.form-exit {
+    opacity: 0;
+	transform: perspective(600px) translate(-100%, 0px) rotateY(45deg);
+}
+.form-exit-active {
+    transform: perspective(600px) translate(0%, 0px) rotateY(0deg);
+	opacity: 1;
+}
 
 .form__input {
     position: relative;

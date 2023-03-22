@@ -5,21 +5,30 @@ import Navbar from '../navbar/Navbar';
 import './header.css';
 
 const Header = () => {
-    const {isAuth} = useTypedSelector(state => state.global)
-    const {setIsAuth} = useActions();
+    const {isAuth, isBurgerActive} = useTypedSelector(state => state.global)
+    const {setIsAuth, setIsBurgerActive} = useActions();
+    function logOut() {
+        setIsAuth(false);
+        setIsBurgerActive(false)
+    }
 
     return (
         <header className="header">
             <div className="header__container container">
-                <div className='header__row'>
+                <div className={isBurgerActive ? 'header__row active' : 'header__row'}>
                     <Navbar/>
                     <div className='header__button'>
                         <button 
-                            onClick={() => setIsAuth(false)}
+                            onClick={() => logOut()}
                             className={isAuth ? 'header__btn visible' : 'header__btn'}>
                             Вийти
                         </button>
                     </div>
+                </div>
+                <div className={isBurgerActive ? "burger__icon active" : "burger__icon"} onClick={() => setIsBurgerActive(!isBurgerActive)}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </header>
